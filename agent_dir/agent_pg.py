@@ -7,6 +7,7 @@ import torch.optim as optim
 from scipy.misc import imsave, imresize
 
 class actor(nn.module):
+
     def __init__self(self):
         super().__init__()
         self.nt = nn.Sequential(
@@ -33,7 +34,7 @@ class Agent_PG(Agent):
         self.curr_state=env.reset()
         self.reward_sum=0
         self.episode_number=0
-        self.batchsize=10
+        self.batchsize=9
         self.gamma=0.99
 
     def init_game_setting(self):
